@@ -5,10 +5,11 @@ import IMPSTransferForm from './pages/imps/IMPSTransferForm';
 import NEFTTransferForm from './pages/neft/NEFTTransferForm';
 
 function App() {
+
   return (
     <div>
       {/* <RTGSTransferForm/> */}
-      <IMPSTransferForm/>
+      {/* <IMPSTransferForm/> */}
       {/* <NEFTTransferForm/> */}
     </div>
   );
