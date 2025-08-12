@@ -3,30 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import NEFTTransferForm from './pages/neft/NEFTTransferForm';
-import RTGSTransferForm from './pages/rtgs/RTGSTransferForm';
-import IMPSTransferForm from './pages/imps/IMPSTransferForm';
-
-  const router= createBrowserRouter([
-    {
-      path: "/neft",
-      element: <NEFTTransferForm/>
-    },
-    {
-      path: "/rtgs",
-      element: <RTGSTransferForm/>
-    },
-    {
-      path: "/imps",
-      element: <IMPSTransferForm/>
-    },
-  ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
 

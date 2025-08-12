@@ -1,0 +1,112 @@
+.transfers-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3b0764, #9333ea);
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Card grid layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.transfer-card {
+  padding: 30px 20px;
+  border-radius: 20px;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.transfer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.icon {
+  margin-bottom: 15px;
+}
+
+/* Force readable sections */
+.latest-section,
+.scheduled-section,
+.recipients-section {
+  margin-top: 2rem;
+  background: white !important;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+  color: #333 !important; /* Force dark text */
+}
+
+.latest-section h2,
+.scheduled-section h2,
+.recipients-section h2 {
+  color: #6b21a8;
+}
+
+/* Shared table style */
+.styled-table,
+.latest-transfers-table,
+.scheduled-table,
+.saved-recipients-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.styled-table thead tr,
+.latest-transfers-table thead tr,
+.scheduled-table thead tr,
+.saved-recipients-table thead tr {
+  background-color: #6b21a8;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td,
+.latest-transfers-table th,
+.latest-transfers-table td,
+.scheduled-table th,
+.scheduled-table td,
+.saved-recipients-table th,
+.saved-recipients-table td {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  color: #333 !important; /* Ensure visible text */
+}
+
+.styled-table tbody tr:nth-child(even),
+.latest-transfers-table tbody tr:nth-child(even),
+.scheduled-table tbody tr:nth-child(even),
+.saved-recipients-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover,
+.latest-transfers-table tbody tr:hover,
+.scheduled-table tbody tr:hover,
+.saved-recipients-table tbody tr:hover {
+  background-color: #f1e9fb;
+}
+
+/* Status colors */
+.status.success { color: green; }
+.status.pending { color: orange; }
+.status.failed { color: red; }

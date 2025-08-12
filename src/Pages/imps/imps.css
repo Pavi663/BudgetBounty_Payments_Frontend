@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  background-color: #5e2b97;
+  text-align: center;
+}
+
+/* Background styles remain the same */
+.imps-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(940px 940px at 110% -10%, transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(620px 620px at 98% 2%, transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(880px 880px at -12% 112%, transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(520px 520px at 2% 102%, transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(260px 260px at 70% 32%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(200px 200px at 35% 45%, rgba(255,255,255,0.05), transparent 75%),
+    linear-gradient(135deg, #6f2dbd 0%, #5b21b6 45%, #4c1d95 100%);
+}
+
+/* Desktop-friendly container */
+.imps-container {
+  font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header stays same */
+.imps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+}
+
+.balance-amt {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+/* Form - desktop width */
+.imps-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns for desktop */
+  gap: 20px;
+}
+
+/* Inputs take full column width inside grid */
+.imps-form input,
+.note-input,
+.form-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+}
+
+.note-input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.note-input:focus {
+  border: 1px solid #6a0dad;
+}
+
+.form-field {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+}
+
+.form-field::placeholder {
+  font-weight: bold;
+}
+
+.form-field:focus {
+  border-bottom: 2px solid #6a0dad;
+}
+
+/* Amount input - full width row */
+.amount-label {
+  font-weight: bold;
+  font-size: large;
+  grid-column: span 2;
+  text-align: center;
+}
+
+.amount-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  grid-column: span 2;
+}
+
+.amount-input span {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.amount-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 35px;
+  width: 100%;
+}
+
+.error-text {
+  color: #c50404;
+  grid-column: span 2;
+}
+
+/* Button centered & full width on desktop */
+.imps-form button {
+  grid-column: span 2;
+  padding: 14px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.imps-form button:hover {
+  background: #500a87;
+}
+/* Page background */
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------------
+   FORM CONTAINER & FORM STYLE
+----------------------------*/
+.imps-form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.imps-form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+
+  /* Desktop width */
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile form layout */
+@media (max-width: 768px) {
+  .imps-form {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    padding: 20px;
+  }
+}

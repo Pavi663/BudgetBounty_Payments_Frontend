@@ -1,38 +1,73 @@
-.App {
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(940px 940px at 110% -10%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(620px 620px at 98% 2%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(880px 880px at -12% 112%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(520px 520px at 2% 102%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(260px 260px at 70% 32%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(200px 200px at 35% 45%, rgba(255,255,255,0.05), transparent 75%),
+    linear-gradient(135deg, #6f2dbd 0%, #5b21b6 45%, #4c1d95 100%);
+  color: white;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.balance {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-row {
+  margin: 20px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.button-row button {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-row button:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 300px;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+form input, form button {
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form input {
+  outline: none;
+}
+
+form button {
+  background-color: #4ade80;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #22c55e;
 }

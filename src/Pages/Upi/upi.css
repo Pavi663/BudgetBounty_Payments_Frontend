@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  background-color: #5e2b97;
+  text-align: center;
+}
+
+.upi-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(940px 940px at 110% -10%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(620px 620px at 98% 2%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(880px 880px at -12% 112%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(520px 520px at 2% 102%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    radial-gradient(260px 260px at 70% 32%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(200px 200px at 35% 45%, rgba(255,255,255,0.05), transparent 75%),
+    linear-gradient(135deg, #6f2dbd 0%, #5b21b6 45%, #4c1d95 100%);
+}
+
+.upi-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Header: UPI Transfer title & Balance */
+.upi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.upi-header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.balance {
+  display: flex;
+  align-items: center;
+}
+
+.balance-amt {
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+/* Form Container */
+.upi-form {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  margin-top: 10px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.upi-form input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  color: #333;
+}
+
+.note-input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.note-input:focus {
+  border: 1px solid #6a0dad;
+}
+
+.form-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  border-radius: 6px;
+  background: transparent;
+  color: #333;
+}
+
+.form-field::placeholder {
+  font-weight: bold;
+  font-size: 15px;
+  color: #555;
+}
+
+.form-field:focus {
+  border: 1px solid #6a0dad;
+}
+
+.amount-label {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+.amount-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 0 auto 15px auto;
+  width: 100%;
+}
+
+.amount-input span {
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 5px;
+  color: #333;
+}
+
+.amount-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 35px;
+  width: 100%;
+  margin-bottom: 0;
+  color: #333;
+}
+
+.error-text {
+  color: #c50404;
+}
+
+/* Button */
+.upi-form button {
+  width: 50%;
+  padding: 14px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.upi-form button:hover {
+  background: #500a87;
+}
+
+@media (max-width: 768px) {
+  .upi-form {
+    padding: 20px;
+  }
+  
+  .upi-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
