@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import RTGSTransferForm from './pages/rtgs/RTGSTransferForm';
+import IMPSTransferForm from './pages/imps/IMPSTransferForm';
+import NEFTTransferForm from './pages/neft/NEFTTransferForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>BudgetBounty</div>
-      </header>
+    <div>
+      {/* <RTGSTransferForm/> */}
+      <IMPSTransferForm/>
+      {/* <NEFTTransferForm/> */}
     </div>
   );
 }

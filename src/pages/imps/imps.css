@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  background-color: #5e2b97;
+  text-align: center;
+}
+
+.imps-hero {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    /* TOP-RIGHT rings */
+    radial-gradient(940px 940px at 110% -10%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(620px 620px at 98% 2%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+
+    /* BOTTOM-LEFT rings */
+    radial-gradient(880px 880px at -12% 112%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(520px 520px at 2% 102%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+
+    /* Soft bubbles */
+    radial-gradient(260px 260px at 70% 32%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(200px 200px at 35% 45%, rgba(255,255,255,0.05), transparent 75%),
+
+    /* Base gradient */
+    linear-gradient(135deg, #6f2dbd 0%, #5b21b6 45%, #4c1d95 100%);
+}
+
+.imps-container {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 25px auto;
+  padding: 20px;
+}
+
+.imps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.balance{
+    display: flex;
+    align-items: center;
+}
+
+.balance-amt{
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+.imps-form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.imps-form input {
+  width: 70%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.note-input{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.note-input:focus{
+    border: 1px solid #6a0dad;
+}
+.form-field {
+  width: 70%;
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  background: transparent;
+}
+
+.form-field::placeholder {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.form-field:focus {
+  border-bottom: 2px solid #6a0dad; /* Purple underline on focus */
+}
+
+.amount-label {
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+.amount-input {
+    display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  background: #f2f2f2;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin: 0 auto 15px auto;
+  width: 70%;
+}
+
+.amount-input span {
+  font-weight: bold;
+  font-size: 40px;
+  margin-right: 5px;
+}
+
+.amount-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 35px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.error-text{
+    color: #c50404;
+}
+
+.imps-form button {
+  width: 50%;
+  padding: 14px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.imps-form button:hover {
+  background: #500a87;
+}
