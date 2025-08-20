@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  background-color: #5e2b97;
+  text-align: center;
+  height: 100vh;             /* Ensure body height fills viewport */
+  display: flex;             /* Flex container for vertical centering */
+  justify-content: center;   /* Center horizontally */
+  align-items: center;       /* Center vertically */
+}
+
+.payment-loading-bg {
+  min-height: 100vh;
+  width: 100vw;              /* Full viewport width */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    /* TOP-RIGHT rings */
+    radial-gradient(940px 940px at 110% -10%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(620px 620px at 98% 2%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    /* BOTTOM-LEFT rings */
+    radial-gradient(880px 880px at -12% 112%,
+      transparent 58%, rgba(255,255,255,0.12) 59%, rgba(255,255,255,0.12) 63%, transparent 64%),
+    radial-gradient(520px 520px at 2% 102%,
+      transparent 60%, rgba(255,255,255,0.09) 61%, rgba(255,255,255,0.09) 66%, transparent 67%),
+    /* Soft bubbles */
+    radial-gradient(260px 260px at 70% 32%, rgba(255,255,255,0.06), transparent 70%),
+    radial-gradient(200px 200px at 35% 45%, rgba(255,255,255,0.05), transparent 75%),
+    /* Base gradient */
+    linear-gradient(135deg, #6f2dbd 0%, #5b21b6 45%, #4c1d95 100%);
+}
+
+.payment-card.loading {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 22px;
+  width: 350px;
+  box-shadow: 0 6px 32px 0 rgba(0,0,0,0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;            /* Horizontal centering if flex fails */
+  flex-shrink: 0;
+}
+
+.success-check {
+  background: #fff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: -40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  color: #28c76f;
+  font-size: 26px;
+}
+
+.spinner-ring {
+  width: 26px;
+  height: 26px;
+  border: 3px solid #eee;
+  border-top: 3px solid #28c76f;
+  border-radius: 50%;
+  animation: spinner-rotate 1s linear infinite;
+}
+
+@keyframes spinner-rotate {
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #682dbd;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 13px;
+  color: #757575;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Ad carousel/banner */
+.ad-banner {
+  width: 95%;
+  margin: 0 auto 8px auto;
+  text-align: center;
+  background: #f6f6fa;
+  border-radius: 8px;
+  padding: 4px 0;
+  font-size: 14px;
+  color: #682dbd;
+  box-shadow: 0 1px 4px rgba(40,199,111,0.04);
+}
+
+@media (max-width: 400px) {
+  .payment-card.loading {
+    width: 98vw;
+  }
+}

@@ -1,0 +1,55 @@
+.ads-outer {
+  width: 95%;
+  height: 50px;
+  margin: 10px auto 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f6f6fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(40,199,111,0.04);
+  position: relative;
+}
+
+.ad-slide {
+  transition: transform 0.4s cubic-bezier(.7,.28,.34,1.25), opacity 0.4s;
+  will-change: transform;
+  transform: translateX(0);
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ad-slide.sliding {
+  transform: translateX(-110%);
+  opacity: 0.2;
+}
+
+
+.ads-outer img {
+  width: 620px;   /* double the width */
+  height: 100px;   /* double the height */
+  object-fit: contain; /* or cover if you want */
+}
+.ads-outer {
+  width: 100%;       /* fill the ad-banner width */
+  height: 100%;      /* fill the ad-banner height */
+  overflow: hidden;
+}
+.ad-slide img {
+  width: 600px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.ad-slide img {
+  width: auto;
+  max-width: 1000px;  /* Increase to desired size */
+  height: 300px ;
+  border-radius: 8px; /* optional */
+}
+
+
+
